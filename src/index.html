@@ -66,7 +66,7 @@
             <label class="form-label">
                 Пароль:
             </label>
-            <div class="form-icon-field form-password">
+            <div class="form-icon-field form-password is-hidden">
                 <input type="password"
                        class="form-field"
                        placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"
@@ -85,7 +85,8 @@
                     </svg>
                 </div>
                 <button type="button"
-                        class="form-password__button">
+                        class="form-password__button"
+                        data-toggle>
                     Показать пароль
                 </button>
             </div>
@@ -96,15 +97,15 @@
             <label class="form-label">
                 Подтвердите пароль:
             </label>
-            <div class="form-icon-field form-password">
+            <div class="form-icon-field form-password is-hidden">
                 <input type="password"
-                    class="form-field"
-                    placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"
-                    name="passwordConfirm"
-                    data-required="true"
-                    data-required-message="Подтвердите пароль"
-                    data-equal-to="#password"
-                    data-equal-to-message="Пароли не совпадают">
+                       class="form-field"
+                       placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"
+                       name="passwordConfirm"
+                       data-required="true"
+                       data-required-message="Подтвердите пароль"
+                       data-equal-to="#password"
+                       data-equal-to-message="Пароли не совпадают">
                 <div class="form-icon">
                     <svg viewBox="0 0 30 30">
                         <path class="stroke" d="M21,12  H9V9c0-3.314,2.686-6,6-6h0c3.314,0,6,2.686,6,6V12z" />
@@ -112,7 +113,8 @@
                     </svg>
                 </div>
                 <button type="button"
-                        class="form-password__button">
+                        class="form-password__button"
+                        data-toggle>
                     Показать пароль
                 </button>
             </div>

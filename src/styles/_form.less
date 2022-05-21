@@ -158,12 +158,42 @@ input {
     align-items: center;
     justify-content: center;
     border: none;
-    background: url('@{path-images}/icon-eye-show.svg') no-repeat 50% 50%;
-    background-size: 45% 45%;
     overflow: hidden;
     text-indent: -1000px;
     opacity: .5;
     cursor: pointer;
+    background: none;
+
+    &:before,
+    &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        left: 0; 
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: no-repeat 50% 50%;
+        background-size: 45% 45%;
+    }
+    &:before {
+        background-image: url('@{path-images}/icon-eye-hide.svg');
+    }
+    &:after {
+        background-image: url('@{path-images}/icon-eye-show.svg');
+    }
+
+    &:before {
+        .form-password.is-shown & {
+            display: block;
+        }
+    }
+
+    &:after {
+        .form-password.is-hidden & {
+            display: block;
+        }
+    }
 }
 
 @media (hover: hover) {
