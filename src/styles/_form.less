@@ -2,17 +2,17 @@
 // Autofill Chrome
 //
 
-// input {
-//     &:-webkit-autofill,
-//     &:-webkit-autofill:hover,
-//     &:-webkit-autofill:focus,
-//     &:-webkit-autofill:active {
-//         transition: background-color 5000s ease-in-out 0s;
-//     }
-//     &:-webkit-autofill{
-//         -webkit-text-fill-color: #fff !important;
-//     }
-// }
+input {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        -webkit-background-clip: text;
+    }
+    &:-webkit-autofill{
+        -webkit-text-fill-color: #fff !important;
+    }
+}
 
 //
 // Form Label
@@ -61,27 +61,6 @@
 
     &::-ms-input-placeholder { 
         color: fade(#fff, 70%);
-    }
-
-    &:focus {
-        background: linear-gradient(
-            fade(#fff, 15%), 
-            fade(#fff, 25%)
-        );
-    }
-
-    &_error {
-        background: linear-gradient(
-            fade(#fff, 5%), 
-            fade(@danger, 10%)
-        );
-    }
-
-    &_success {
-        background: linear-gradient(
-            fade(#fff, 5%), 
-            fade(@success, 15%)
-        );
     }
 }
 
