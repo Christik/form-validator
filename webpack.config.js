@@ -30,7 +30,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new CopyPlugin({
             patterns: [
-              { from: './src/images', to: './dist/images' },
+              { from: './src/images', to: './images' },
             ],
         }),
     ],
